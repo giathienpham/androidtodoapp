@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/editTodoFragment"
+    tools:context="com.example.thien.mytodolist.EditItemFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="41dp"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="39dp"
+            android:textColor="#000000"
+            android:id="@+id/textView4" />
+
+        <TextView
+            android:text="Priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEditTitle"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignEnd="@+id/textView4"
+            android:layout_marginTop="41dp"
+            android:textColor="#000000"
+            android:id="@+id/textView5" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text=""
+            android:hint="Todo's title"
+            android:ems="10"
+            android:layout_marginRight="19dp"
+            android:layout_marginEnd="19dp"
+            android:id="@+id/txtEditTitle"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spnEditPriority"
+            android:layout_marginRight="100px"
+            android:layout_alignRight="@+id/txtEditTitle"
+            android:layout_alignEnd="@+id/txtEditTitle"
+            android:layout_alignTop="@+id/textView5"
+            android:prompt="@string/priority_prompt"
+            android:entries="@array/priority_arrays"
+            />
+
+        <Button
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpdate"
+            android:layout_marginBottom="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/textView5"
+            android:layout_alignStart="@+id/textView5" />
+
+        <Button
+            android:text="Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancelEdit"
+            android:layout_alignBaseline="@+id/btnDelete"
+            android:layout_alignBottom="@+id/btnDelete"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDelete"
+            android:layout_alignBaseline="@+id/btnUpdate"
+            android:layout_alignBottom="@+id/btnUpdate"
+            android:layout_alignLeft="@+id/txtEditTitle"
+            android:layout_alignStart="@+id/txtEditTitle"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp" />
+
+
+    </RelativeLayout>
+</FrameLayout>
